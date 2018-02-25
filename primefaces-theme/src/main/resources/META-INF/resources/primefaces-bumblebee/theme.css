@@ -4823,6 +4823,21 @@ span.checkbox2 {
 .log-input .checkbox input:checked + i:after {
 	opacity: 1;
 }
+
+.sign-in-form .ui-button {
+	font-size: 1.1em;
+	color: #fff;
+	background: #00ACED;
+	border: none;
+	padding: 0.7em 1em 0.7em 1em;
+	width: 88.5%;
+	margin-top: 0.5em;
+	display: block;
+	outline: none;
+	border-radius: 4px;
+	cursor:pointer;
+}
+
 .sign-in-form input[type="submit"] {
 	font-size: 1.1em;
     color: #fff;
@@ -4836,6 +4851,15 @@ span.checkbox2 {
 	border-radius: 4px;
 	cursor:pointer;
 }
+
+.sign-in-form .ui-button:hover {
+	background:#8BC34A;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+
 .sign-in-form input[type="submit"]:hover {
 	 background:#8BC34A;
 	 transition: 0.5s all;
