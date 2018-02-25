@@ -1,0 +1,25 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.primefaces:primefaces:6.1'
+        compile 'org.slf4j:slf4j-api:1.7.25'
+        testCompile 'junit:junit:4.12'
+    }
+}
+
+project (":primefaces-demo") {
+    apply plugin: 'war'
+
+    dependencies {
+        compile project(":primefaces-theme")
+        compileOnly group: 'javax', name: 'javaee-api', version: '7.0'
+    }
+}
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: mahsom
+  Date: 2/25/18
+  Time: 11:39 PM
+-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Title</title>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/bootstrap.min.css"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/jquery-1.10.2.min.js"/>
+</h:head>
+
+<h:body>
+    <section>
+        <div id="page-wrapper" class="sign-in-wrapper">
+            <div class="graphs">
+                <div class="sign-in-form">
+                    <div class="signin">
+                        <h:form>
+                            <div class="log-input">
+                                <p:inputText styleClass="user"
+                                             value="${sampleBean.name}"
+                                             placeholder="Email Address:"
+                                             onblur="if (placeholder === '') { placeholder = 'Email Address:'};"
+                                             onfocus="placeholder = '';"/>
+                            </div>
+                            <div class="log-input">
+                                <p:password styleClass="lock"
+                                             value="${sampleBean.name}"
+                                             placeholder="Password :"
+                                             onblur="if (placeholder === '') { placeholder = 'Email Address:'};"
+                                             onfocus="placeholder = '';"/>
+                            </div>
+                            <h:commandButton value="Login to your account" type="submit"/>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h:outputScript library="primefaces-bumblebee" name="js/jquery.nicescroll.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/scripts.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/bootstrap.min.js"/>
+</h:body>
+
+</html>
