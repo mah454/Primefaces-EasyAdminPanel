@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Created by IntelliJ IDEA.
+  User: mahsom
+  Date: 2/25/18
+  Time: 11:39 PM
+-->
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Title</title>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/entypo.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/font-awesome.min.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/plugins/css3-animate-it-plugin/animations.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/mouldifi-core.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/mouldifi-forms.css"/>
+</h:head>
+
+<h:body styleClass="login-page">
+
+    <div class="login-pag-inner">
+        <div class="animatedParent animateOnce z-index-50">
+            <div class="login-container animated growIn slower">
+                <div class="login-branding">
+                    <a href="index.html"><img src="#{resource['primefaces-bumblebee:images/logo.png']}" alt="Mouldifi"
+                                              title="Mouldifi"/></a>
+                </div>
+                <div class="login-content">
+                    <h2><strong>Welcome</strong>, please login</h2>
+                    <h:form>
+                        <div class="form-group">
+                            <p:inputText placeholder="Username" value="#{loginBean.username}"
+                                         styleClass="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            <p:password placeholder="Password" value="#{loginBean.password}" styleClass="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <h:commandButton styleClass="btn btn-primary btn-block" value="Login"
+                                             action="#{loginBean.action}"/>
+                        </div>
+                        <p class="text-center">
+                            <p:link href="forget-password.html" value="Forget your password ?"/>
+                        </p>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h:outputScript library="primefaces-bumblebee" name="js/jquery.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/jquery.nicescroll.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/css3-animate-it-plugin/css3-animate-it.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/bootstrap.min.js"/>
+</h:body>
+
+</html>
