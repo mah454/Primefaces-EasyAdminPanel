@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Title</title>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/entypo.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/font-awesome.min.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/plugins/css3-animate-it-plugin/animations.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/mouldifi-core.css"/>
+    <h:outputStylesheet library="primefaces-bumblebee" name="css/mouldifi-forms.css"/>
+</h:head>
+<h:body>
+    <div class="page-container">
+
+        <ui:include src="sidebar.xhtml"/>
+
+        <div class="main-container gray-bg">
+            <ui:include src="header.xhtml"/>
+            <ui:insert name="content"/>
+        </div>
+    </div>
+
+
+    <h:outputScript library="primefaces-bumblebee" name="js/jquery.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/jquery.nicescroll.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/css3-animate-it-plugin/css3-animate-it.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/bootstrap.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/metismenu/jquery.metisMenu.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/blockui-master/jquery-ui.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/blockui-master/jquery.blockUI.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.tooltip.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.resize.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.selection.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.pie.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.time.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/functions.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/plugins/chartjs/Chart.min.js"/>
+    <h:outputScript library="primefaces-bumblebee" name="js/my.js"/>
+</h:body>
+</html>

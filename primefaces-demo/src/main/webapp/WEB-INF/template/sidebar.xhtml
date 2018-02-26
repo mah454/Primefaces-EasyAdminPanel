@@ -1,0 +1,244 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <!-- Page Sidebar -->
+    <div class="page-sidebar">
+
+        <!-- Site header  -->
+        <header class="site-header">
+            <div class="site-logo">
+                <p:link outcome="/index.xhtml">
+                    <p:graphicImage value="#{resource['primefaces-bumblebee:images/logo.png']}" alt="Mouldifi"
+                                    title="Mouldifi"/>
+                </p:link>
+            </div>
+            <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i
+                    class="icon-menu"/></a></div>
+            <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse"
+                                                           class="mobile-menu-icon" href="#"><i
+                    class="icon-menu"/></a></div>
+        </header>
+        <!-- /site header -->
+
+        <!-- Main navigation -->
+        <ul id="side-nav" class="main-menu navbar-collapse collapse">
+            <li class="has-sub active ">
+                <a href="index.html"><i class="icon-gauge"/><p:outputLabel value="Dashboard"
+                                                                           styleClass="title"/></a>
+                <ul class="nav">
+                    <li class="active"><p:link outcome="index.xhtml"><p:outputLabel value="Misc."
+                                                                                    styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="E-Commerce"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="News Portal"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="collapsed-sidebar.html"><i class="icon-layout"/><p:outputLabel value="Layouts"
+                                                                                        styleClass="title"/></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Collapsed Sidebar"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Fixed Sidebar"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="panels.html"><i class="icon-newspaper"/><span class="title">UI Elements</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Panels" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Buttons"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Typography"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Tabs &amp; Accordions"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Tooltips &amp; Popovers"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Tooltips &amp; Popovers"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Navbars"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Breadcrumbs"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Badges &amp; Labels"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Progress Bars"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Modals" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Alerts" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Pagination"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Video" styleClass="title"/></p:link>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="basic-tables.html"><i class="icon-window"/><span
+                    class="title">Tables</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Basic Tables"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Data Tables"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="form-basic.html"><i class="icon-doc-text"/><span
+                    class="title">Forms</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Basic Form"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Advanced Plugins"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Form Wizard"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="File upload"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Editors"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="graph-flot.html"><i class="icon-chart-bar"/><span
+                    class="title">Graphs</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Flot Charts"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Morris Charts"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Peity Charts"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Sparkline Charts"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="ChartsJs"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Chartist"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="C3 Charts"
+                                                                    styleClass="title"/></p:link></li>
+
+                </ul>
+            </li>
+            <li class="has-sub"><a href="mail-inbox.html"><i class="icon-mail"/><span
+                    class="title">Mailbox</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Inbox" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Compose Mail"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="View Mail"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li><a href="maps-vector.html"><i class="icon-location"/><span class="title">Vector Map</span>
+                <span class="label label-secondary pull-right">NEW</span></a></li>
+            <li class="has-sub"><a href="login.html"><i class="icon-google-circles"/><span
+                    class="title">Various Screens</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Login" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Register"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Forgot password" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Lockscreen"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="404 Page"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Blank Page"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Comments"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="blog.html"><i class="icon-docs"/><span class="title">Extra Pages</span></a>
+                <ul class="nav">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Blog" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Blog Detail"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Timeline"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="icons-entypo.html"><i class="icon-thumbs-up"></i><span
+                    class="title">Icons</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Entypo" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Font Awesome"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Glyph Icons"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="simple-view.html"><i class="icon-list"/><span
+                    class="title">List Views</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Simple View"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Cards View"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Simple View"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Strip View"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Table View"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub"><a href="short-view.html"><i class="icon-popup"/><span
+                    class="title">Grid Views</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Short View"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Detailed View"
+                                                                    styleClass="title"/></p:link></li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Detailed Action View"
+                                                                    styleClass="title"/></p:link></li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a href="index.html#/"><i class="icon-flow-tree"/><span class="title">Menu Levels</span></a>
+                <ul class="nav collapse">
+                    <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 1.1" styleClass="title"/></p:link>
+                    </li>
+                    <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 1.2" styleClass="title"/></p:link>
+                    </li>
+                    <li class="has-sub">
+                        <p:link outcome="index.html"><p:outputLabel value="Menu Level 1.3" styleClass="title"/></p:link>
+                        <ul class="nav collapse">
+                            <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 2.1"
+                                                                            styleClass="title"/></p:link></li>
+                            <li class="has-sub">
+                                <p:link outcome="index.html"><p:outputLabel value="Menu Level 2.2"
+                                                                            styleClass="title"/></p:link>
+                                <ul class="nav collapse">
+                                    <li class="has-sub">
+                                        <p:link outcome="index.html"><p:outputLabel value="Menu Level 3.1"
+                                                                                    styleClass="title"/></p:link>
+                                        <ul class="nav collapse">
+                                            <li><p:link outcome="index.html"><p:outputLabel
+                                                    value="Menu Level 4.1" styleClass="title"/></p:link></li>
+                                        </ul>
+                                    </li>
+                                    <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 3.2"
+                                                                                    styleClass="title"/></p:link>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 2.3"
+                                                                            styleClass="title"/></p:link></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /main navigation -->
+    </div>
+    <!-- /page sidebar -->
+
+</ui:composition>

@@ -1385,7 +1385,7 @@ ul.user-info {
 
 .profile-info.dropdown .dropdown-menu li a:hover {
     color: #333;
-    background-color: #f8f8f8;
+    background-color: #c5bec7;
 }
 
 .profile-info img.avatar {
@@ -3064,7 +3064,7 @@ select.input-sm {
 }
 
 label {
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .label {

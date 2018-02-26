@@ -1,0 +1,213 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+    <!-- Main header -->
+    <div class="main-header row">
+        <div class="col-sm-6 col-xs-7">
+
+            <!-- User info -->
+            <ul class="user-info pull-left">
+                <li class="profile-info dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#" aria-expanded="false">
+                        <p:graphicImage width="44" styleClass="img-circle avatar"
+                                        value="#{resource['primefaces-bumblebee:images/man-3.jpg']}"/>
+                        <p:outputLabel value="John Handerson"/>
+                        <span class="caret"></span>
+                    </a>
+
+                    <!-- User action menu -->
+                    <ul class="dropdown-menu">
+                        <li><p:link outcome="index.html"><i class="icon-user"/><p:outputLabel value="My profile"/></p:link></li>
+                        <li><p:link outcome="index.html"><i class="icon-mail"/><p:outputLabel value="Messages"/></p:link></li>
+                        <li><p:link outcome="index.html"><i class="icon-clipboard"/><p:outputLabel value="Tasks"/></p:link></li>
+                        <p:separator styleClass="divider"/>
+                        <li><p:link outcome="index.html"><i class="icon-cog"/><p:outputLabel value="Account settings"/></p:link></li>
+                        <li><p:link outcome="index.html"><i class="icon-logout"/><p:outputLabel value="Logout"/></p:link></li>
+                    </ul>
+                    <!-- /user action menu -->
+
+                </li>
+            </ul>
+            <!-- /user info -->
+
+        </div>
+
+        <div class="col-sm-6 col-xs-5">
+            <div class="pull-right">
+                <!-- User alerts -->
+                <ul class="user-info pull-left">
+
+                    <!-- Notifications -->
+                    <li class="notifications dropdown">
+                        <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown"
+                           class="dropdown-toggle" href="index.html#"><i class="icon-attention"/><span
+                                class="badge badge-info">6</span></a>
+                        <ul class="dropdown-menu pull-right">
+                            <li class="first">
+                                <div class="small">
+                                    <!--<p:link outcome="#{index}" styleClass="pull-right danger" value="Mark all read"/>-->
+                                    <a class="pull-right danger" href="index.html#"> Mark all Read</a>
+                                    You have<strong>3</strong> new notifications.
+                                </div>
+                            </li>
+                            <li>
+                                <ul class="dropdown-list">
+                                    <li class="unread notification-success">
+                                        <a href="index.html#">
+                                            <i class="icon-user-add pull-right"/>
+                                            <p:outputLabel value="New user registered"
+                                                           styleClass="block-line strong"/>
+                                            <p:outputLabel value="30 seconds ago"
+                                                           styleClass="block-line small"/>
+                                        </a>
+                                    </li>
+                                    <li class="unread notification-secondary">
+                                        <a href="index.html#">
+                                            <i class="icon-heart pull-right"/>
+                                            <p:outputLabel value="Someone special liked this"
+                                                           styleClass="block-line strong"/>
+                                            <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
+                                        </a>
+                                    </li>
+                                    <li class="unread notification-primary">
+                                        <a href="index.html#">
+                                            <i class="icon-user pull-right"/>
+                                            <p:outputLabel value="Privacy settings have been changed"
+                                                           styleClass="block-line strong"/>
+                                            <p:outputLabel value="2 hours ago" styleClass="block-line small"/>
+                                        </a>
+                                    </li>
+                                    <li class="notification-danger">
+                                        <a href="index.html#">
+                                            <i class="icon-cancel-circled pull-right"/>
+                                            <p:outputLabel value="Someone special liked this"
+                                                           styleClass="block-line strong"/>
+                                            <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
+                                        </a>
+                                    </li>
+                                    <li class="notification-info">
+                                        <a href="index.html#">
+                                            <i class="icon-info pull-right"/>
+                                            <p:outputLabel value="Someone special liked this"
+                                                           styleClass="block-line strong"/>
+                                            <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
+                                        </a>
+                                    </li>
+                                    <li class="notification-warning">
+                                        <a href="index.html#">
+                                            <i class="icon-rss pull-right"/>
+                                            <p:outputLabel value="Someone special liked this"
+                                                           styleClass="block-line strong"/>
+                                            <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="external-last">
+                                <p:link outcome="index.xhtml" styleClass="danger" value="View all notifications"/>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /notifications -->
+
+                    <!-- Messages -->
+                    <li class="notifications dropdown">
+                        <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle"
+                           href="index.html#">
+                            <i class="icon-mail"/><span class="badge badge-secondary">12</span>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li class="first">
+                                <div class="dropdown-content-header"><i
+                                        class="fa fa-pencil-square-o pull-right"/> Messages
+                                </div>
+                            </li>
+                            <li>
+                                <ul class="media-list">
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <p:graphicImage styleClass="img-circle img-sm"
+                                                            value="#{resource['primefaces-bumblebee:images/domnic-brown.png']}"/>
+                                        </div>
+                                        <div class="media-body">
+                                            <p:link outcome="index.xhtml" styleClass="media-heading">
+                                                <p:outputLabel styleClass="text-semibold" value="Domnic Brown"/>
+                                                <p:outputLabel styleClass="media-annotation pull-right" value="True"/>
+                                            </p:link>
+                                            <p:outputLabel styleClass="text-muted"
+                                                           value="Your product sounds interesting I would love to check this ne..."/>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <p:graphicImage styleClass="img-circle img-sm"
+                                                            value="#{resource['primefaces-bumblebee:images/john-smith.png']}"/>
+                                        </div>
+                                        <div class="media-body">
+                                            <p:link outcome="index.xhtml" styleClass="media-heading">
+                                                <p:outputLabel styleClass="text-semibold" value="John Smith"/>
+                                                <p:outputLabel styleClass="media-annotation pull-right" value="12:30"/>
+                                            </p:link>
+                                            <p:outputLabel styleClass="text-muted"
+                                                           value="Thank you for posting such a wonderful content. The writing was outstanding..."/>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <p:graphicImage styleClass="img-circle img-sm"
+                                                            value="#{resource['primefaces-bumblebee:images/stella-johnson.png']}"/>
+                                        </div>
+                                        <div class="media-body">
+                                            <p:link outcome="index.xhtml" styleClass="media-heading">
+                                                <p:outputLabel styleClass="text-semibold" value="Stella Johnson"/>
+                                                <p:outputLabel styleClass="media-annotation pull-right"
+                                                               value="2 days ago"/>
+                                            </p:link>
+                                            <p:outputLabel styleClass="text-muted"
+                                                           value="Thank you for trusting us to be your source for top quality sporting goods..."/>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <p:graphicImage styleClass="img-circle img-sm"
+                                                            value="#{resource['primefaces-bumblebee:images/alex-dolgove.png']}"/>
+                                        </div>
+                                        <div class="media-body">
+                                            <p:link outcome="index.xhtml" styleClass="media-heading">
+                                                <p:outputLabel styleClass="text-semibold" value="Alex Dolgove"/>
+                                                <p:outputLabel styleClass="media-annotation pull-right" value="10:45"/>
+                                            </p:link>
+                                            <p:outputLabel styleClass="text-muted"
+                                                           value="After our Friday meeting I was thinking about our business relationship and how fortunate..."/>
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <p:graphicImage styleClass="img-circle img-sm"
+                                                            value="#{resource['primefaces-bumblebee:images/domnic-brown.png']}"/>
+                                        </div>
+                                        <div class="media-body">
+                                            <p:link outcome="index.xhtml" styleClass="media-heading">
+                                                <p:outputLabel styleClass="text-semibold" value="Domnic Brown"/>
+                                                <p:outputLabel styleClass="media-annotation pull-right" value="4:00"/>
+                                            </p:link>
+                                            <p:outputLabel styleClass="text-muted"
+                                                           value="I would like to take this opportunity to thank you for your cooperation in recently completing..."/>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="external-last">
+                                <p:link styleClass="danger" outcome="index.xhtml" value="All Messages"/>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- /messages -->
+                </ul>
+                <!-- /user alerts -->
+            </div>
+        </div>
+    </div>
+    <!-- /main header -->
+
+</ui:composition>

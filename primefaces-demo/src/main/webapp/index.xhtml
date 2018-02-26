@@ -1,1118 +1,641 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:head>
-    <title>Title</title>
-    <h:outputStylesheet library="primefaces-bumblebee" name="css/entypo.css"/>
-    <h:outputStylesheet library="primefaces-bumblebee" name="css/font-awesome.min.css"/>
-    <h:outputStylesheet library="primefaces-bumblebee" name="css/plugins/css3-animate-it-plugin/animations.css"/>
-    <h:outputStylesheet library="primefaces-bumblebee" name="css/mouldifi-core.css"/>
-    <h:outputStylesheet library="primefaces-bumblebee" name="css/mouldifi-forms.css"/>
-</h:head>
-<h:body>
-
-    <h:form>
-        <!-- Page container -->
-        <div class="page-container">
-
-            <!-- Page Sidebar -->
-            <div class="page-sidebar">
-
-                <!-- Site header  -->
-                <header class="site-header">
-                    <div class="site-logo">
-                        <p:link outcome="/index.xhtml">
-                            <p:graphicImage value="#{resource['primefaces-bumblebee:images/logo.png']}" alt="Mouldifi"
-                                            title="Mouldifi"/>
-                        </p:link>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="/WEB-INF/template/layout.xhtml">
+    <ui:define name="content">
+        <!-- Main content -->
+        <div class="main-content">
+            <h1 class="page-title">Dashboard</h1>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6 animatedParent animateOnce z-index-50">
+                            <div class="panel minimal panel-default animated fadeInUp">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title">Signups</div>
+                                    <ul class="panel-tool-options">
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                               aria-expanded="false"><i class="icon-cog"/></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="index.html#"><i class="icon-arrows-ccw"/> Update data</a></li>
+                                                <li><a href="index.html#"><i class="icon-list"/> Detailed log</a>
+                                                </li>
+                                                <li><a href="index.html#"><i class="icon-chart-pie"/> Statistics</a></li>
+                                                <li class="divider"/>
+                                                <li><a href="index.html#"><i class="icon-cancel"/> Clear list</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- panel body -->
+                                <div class="panel-body">
+                                    <div class="row col-with-divider">
+                                        <div class="col-xs-6 text-center stack-order">
+                                            <h1 class="no-margins">87</h1>
+                                            <small>This week</small>
+                                        </div>
+                                        <div class="col-xs-6 text-center stack-order">
+                                            <h1 class="no-margins">53</h1>
+                                            <small>Last week</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animatedParent animateOnce z-index-49">
+                            <div class="panel minimal panel-default animated fadeInUp">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title">Last month sale</div>
+                                    <ul class="panel-tool-options">
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                               aria-expanded="false"><i class="icon-cog"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="index.html#"><i
+                                                        class="icon-arrows-ccw"></i> Update data</a></li>
+                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                                </li>
+                                                <li><a href="index.html#"><i
+                                                        class="icon-chart-pie"></i> Statistics</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- panel body -->
+                                <div class="panel-body">
+                                    <div class="stack-order">
+                                        <h1 class="no-margins">$87,003</h1>
+                                        <small>Raised from 89 orders.</small>
+                                    </div>
+                                    <div class="bar-chart-icon"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="sidebar-collapse hidden-xs"><a class="sidebar-collapse-icon" href="#"><i
-                            class="icon-menu"/></a></div>
-                    <div class="sidebar-mobile-menu visible-xs"><a data-target="#side-nav" data-toggle="collapse"
-                                                                   class="mobile-menu-icon" href="#"><i
-                            class="icon-menu"/></a></div>
-                </header>
-                <!-- /site header -->
-
-                <!-- Main navigation -->
-                <ul id="side-nav" class="main-menu navbar-collapse collapse">
-                    <li class="has-sub active ">
-                        <a href="index.html"><i class="icon-gauge"/><p:outputLabel value="Dashboard"
-                                                                                   styleClass="title"/></a>
-                        <ul class="nav">
-                            <li class="active"><p:link outcome="index.xhtml"><p:outputLabel value="Misc."
-                                                                                            styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="E-Commerce"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="News Portal"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="collapsed-sidebar.html"><i class="icon-layout"/><p:outputLabel value="Layouts"
-                                                                                                styleClass="title"/></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Collapsed Sidebar"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Fixed Sidebar"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="panels.html"><i class="icon-newspaper"/><span class="title">UI Elements</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Panels" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Buttons"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Typography"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Tabs &amp; Accordions"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Tooltips &amp; Popovers"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Tooltips &amp; Popovers"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Navbars"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Breadcrumbs"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Badges &amp; Labels"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Progress Bars"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Modals" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Alerts" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Pagination"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Video" styleClass="title"/></p:link>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="basic-tables.html"><i class="icon-window"/><span
-                            class="title">Tables</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Basic Tables"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Data Tables"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="form-basic.html"><i class="icon-doc-text"/><span
-                            class="title">Forms</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Basic Form"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Advanced Plugins"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Form Wizard"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="File upload"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Editors"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="graph-flot.html"><i class="icon-chart-bar"/><span
-                            class="title">Graphs</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Flot Charts"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Morris Charts"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Peity Charts"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Sparkline Charts"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="ChartsJs"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Chartist"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="C3 Charts"
-                                                                            styleClass="title"/></p:link></li>
-
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="mail-inbox.html"><i class="icon-mail"/><span
-                            class="title">Mailbox</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Inbox" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Compose Mail"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="View Mail"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li><a href="maps-vector.html"><i class="icon-location"/><span class="title">Vector Map</span>
-                        <span class="label label-secondary pull-right">NEW</span></a></li>
-                    <li class="has-sub"><a href="login.html"><i class="icon-google-circles"/><span
-                            class="title">Various Screens</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Login" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Register"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Forgot password" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Lockscreen"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="404 Page"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Blank Page"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Comments"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="blog.html"><i class="icon-docs"/><span class="title">Extra Pages</span></a>
-                        <ul class="nav">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Blog" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Blog Detail"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Timeline"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="icons-entypo.html"><i class="icon-thumbs-up"></i><span
-                            class="title">Icons</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Entypo" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Font Awesome"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Glyph Icons"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="simple-view.html"><i class="icon-list"/><span
-                            class="title">List Views</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Simple View"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Cards View"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Simple View"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Strip View"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Table View"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub"><a href="short-view.html"><i class="icon-popup"/><span
-                            class="title">Grid Views</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Short View"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Detailed View"
-                                                                            styleClass="title"/></p:link></li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Detailed Action View"
-                                                                            styleClass="title"/></p:link></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="index.html#/"><i class="icon-flow-tree"/><span class="title">Menu Levels</span></a>
-                        <ul class="nav collapse">
-                            <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 1.1" styleClass="title"/></p:link>
-                            </li>
-                            <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 1.2" styleClass="title"/></p:link>
-                            </li>
-                            <li class="has-sub">
-                                <p:link outcome="index.html"><p:outputLabel value="Menu Level 1.3" styleClass="title"/></p:link>
-                                <ul class="nav collapse">
-                                    <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 2.1"
-                                                                                    styleClass="title"/></p:link></li>
-                                    <li class="has-sub">
-                                        <p:link outcome="index.html"><p:outputLabel value="Menu Level 2.2"
-                                                                                    styleClass="title"/></p:link>
-                                        <ul class="nav collapse">
-                                            <li class="has-sub">
-                                                <p:link outcome="index.html"><p:outputLabel value="Menu Level 3.1"
-                                                                                            styleClass="title"/></p:link>
-                                                <ul class="nav collapse">
-                                                    <li><p:link outcome="index.html"><p:outputLabel
-                                                            value="Menu Level 4.1" styleClass="title"/></p:link></li>
-                                                </ul>
+                    <div class="row">
+                        <div class="col-md-6 animatedParent animateOnce z-index-48">
+                            <div class="panel minimal panel-default animated fadeInUp">
+                                <div class="panel-heading clearfix">
+                                    <div class="panel-title">Visitors</div>
+                                    <ul class="panel-tool-options">
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                               aria-expanded="false"><i class="icon-cog"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="index.html#"><i
+                                                        class="icon-arrows-ccw"></i> Update data</a></li>
+                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                                </li>
+                                                <li><a href="index.html#"><i
+                                                        class="icon-chart-pie"></i> Statistics</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- panel body -->
+                                <div class="panel-body">
+                                    <div class="stack-order">
+                                        <h1 class="no-margins">823</h1>
+                                        <small>New visits this month</small>
+                                    </div>
+                                    <div class="bar-chart-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animatedParent animateOnce z-index-47">
+                            <div class="panel minimal panel-default animated fadeInUp">
+                                <div class="panel-heading no-border clearfix">
+                                    <ul class="panel-tool-options">
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                               aria-expanded="false"><i class="icon-cog"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="index.html#"><i
+                                                        class="icon-arrows-ccw"></i> Update data</a></li>
+                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                                </li>
+                                                <li><a href="index.html#"><i
+                                                        class="icon-chart-pie"></i> Statistics</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- panel body -->
+                                <div class="panel-body panel-content">
+                                    <div class="stack-order text-center">
+                                        <h1>7856</h1>
+                                        <h4>Products sold so far</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 animatedParent animateOnce z-index-46">
+                            <div class="panel panel-default animated fadeInUp">
+                                <div class="panel-body">
+                                    <h2>Recent comments from customers</h2>
+                                    <ul class="comments-list removeable-list">
+                                        <li>
+                                            <div class="comment-head"><a
+                                                    href="index.html#/">Jassica</a> commented on <a
+                                                    href="index.html#/">4 keys to make your business unique</a>
+                                            </div>
+                                            <div class="comment-text">
+                                                <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
+                                            </div>
+                                            <div class="comment-footer">
+                                                <button class="btn btn-sm btn-success">APPROVE</button>
+                                                <button class="btn btn-sm btn-red">DELETE</button>
+                                            </div>
+                                            <a href="index.html#/" class="remove"><img
+                                                    src="images/icon-close.png" alt="Remove"
+                                                    title="Remove"/></a>
+                                        </li>
+                                        <li>
+                                            <div class="comment-head"><a
+                                                    href="index.html#/">Jassica</a> commented on <a
+                                                    href="index.html#/">4 keys to make your business unique</a>
+                                            </div>
+                                            <div class="comment-text">
+                                                <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
+                                            </div>
+                                            <div class="comment-footer">
+                                                <button class="btn btn-sm btn-success">APPROVE</button>
+                                                <button class="btn btn-sm btn-red">DELETE</button>
+                                            </div>
+                                            <a href="index.html#/" class="remove"><img
+                                                    src="images/icon-close.png" alt="Remove"
+                                                    title="Remove"/></a>
+                                        </li>
+                                        <li>
+                                            <div class="comment-head"><a
+                                                    href="index.html#/">Jassica</a> commented on <a
+                                                    href="index.html#/">4 keys to make your business unique</a>
+                                            </div>
+                                            <div class="comment-text">
+                                                <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
+                                            </div>
+                                            <div class="comment-footer">
+                                                <button class="btn btn-sm btn-success">APPROVE</button>
+                                                <button class="btn btn-sm btn-red">DELETE</button>
+                                            </div>
+                                            <a href="index.html#/" class="remove"><img
+                                                    src="images/icon-close.png" alt="Remove"
+                                                    title="Remove"/></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 animatedParent animateOnce z-index-45">
+                            <div class="panel panel-default animated fadeInUp">
+                                <div class="panel-heading no-border clearfix">
+                                    <h3 class="panel-title">VISIT STATS</h3>
+                                    <ul class="panel-tool-options">
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                               aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="index.html#"><i
+                                                        class="icon-arrows-ccw"></i> Update data</a></li>
+                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                                </li>
+                                                <li><a href="index.html#"><i
+                                                        class="icon-chart-pie"></i> Statistics</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- panel body -->
+                                <div class="panel-body">
+                                    <div class="canvas-chart has-doughnut-legend">
+                                        <canvas id="doughnutChart" width="408" height="300"></canvas>
+                                    </div>
+                                    <div class="height-13"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="animatedParent animateOnce z-index-44">
+                        <div class="panel-group animated fadeInUp">
+                            <div class="panel panel-invert">
+                                <div class="panel-heading no-border clearfix">
+                                    <h2 class="panel-title">Revenue</h2>
+                                    <ul class="panel-tool-options">
+                                        <li><a href="index.html#" id="Revenuelines"><i
+                                                class="icon-chart-line icon-2x"></i></a></li>
+                                        <li class="dropdown">
+                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                               aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                            <ul class="dropdown-menu dropdown-menu-right">
+                                                <li><a href="index.html#"><i
+                                                        class="icon-arrows-ccw"></i> Update data</a></li>
+                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                                </li>
+                                                <li><a href="index.html#"><i
+                                                        class="icon-chart-pie"></i> Statistics</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="flot-chart">
+                                        <div id="Revenue-lines" class="flot-chart-content"></div>
+                                    </div>
+                                    <div id="placeholder_overview" style="width:100%; height:60px;"></div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-body">
+                                    <div class="panel-update-content">
+                                        <div class="row-revenue clearfix">
+                                            <div class="col-xs-6">
+                                                <h5>Gross Revenue</h5>
+                                                <h1>9,362.74</h1>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h5>Net Revenue</h5>
+                                                <h1>6,734.89</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animatedParent animateOnce z-index-43">
+                        <div class="panel panel-default no-border animated fadeInUp">
+                            <div class="panel-heading no-border clearfix">
+                                <h2 class="panel-title">Latest Activities</h2>
+                                <ul class="panel-tool-options">
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                           aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><a href="index.html#"><i
+                                                    class="icon-arrows-ccw"></i> Update data</a></li>
+                                            <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
                                             </li>
-                                            <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 3.2"
-                                                                                            styleClass="title"/></p:link>
+                                            <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><p:link outcome="index.html"><p:outputLabel value="Menu Level 2.3"
-                                                                                    styleClass="title"/></p:link></li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <!-- /main navigation -->
-            </div>
-            <!-- /page sidebar -->
-
-
-            <!-- Main container -->
-            <div class="main-container gray-bg">
-
-                <!-- Main header -->
-                <div class="main-header row">
-                    <div class="col-sm-6 col-xs-7">
-
-                        <!-- User info -->
-                        <ul class="user-info pull-left">
-                            <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle"
-                                                                 href="index.html#" aria-expanded="false"> <img
-                                    width="44" class="img-circle avatar" alt="" src="images/man-3.jpg"/>John Henderson
-                                <span class="caret"></span></a>
-
-                                <!-- User action menu -->
-                                <ul class="dropdown-menu">
-
-                                    <li><a href="index.html#/"><i class="icon-user"></i>My profile</a></li>
-                                    <li><a href="index.html#/"><i class="icon-mail"></i>Messages</a></li>
-                                    <li><a href="index.html#"><i class="icon-clipboard"></i>Tasks</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="index.html#"><i class="icon-cog"></i>Account settings</a></li>
-                                    <li><a href="index.html#"><i class="icon-logout"></i>Logout</a></li>
-                                </ul>
-                                <!-- /user action menu -->
-
-                            </li>
-                        </ul>
-                        <!-- /user info -->
-
-                    </div>
-
-                    <div class="col-sm-6 col-xs-5">
-                        <div class="pull-right">
-                            <!-- User alerts -->
-                            <ul class="user-info pull-left">
-
-                                <!-- Notifications -->
-                                <li class="notifications dropdown">
-                                    <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown"
-                                       class="dropdown-toggle" href="index.html#"><i class="icon-attention"/><span
-                                            class="badge badge-info">6</span></a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li class="first">
-                                            <div class="small">
-                                                <!--<p:link outcome="#{index}" styleClass="pull-right danger" value="Mark all read"/>-->
-                                                <a class="pull-right danger" href="index.html#"> Mark all Read</a>
-                                                You have<strong>3</strong> new notifications.
+                            </div>
+                            <div class="panel-body">
+                                <ul class="list-item">
+                                    <li>
+                                        <div class="feed-element">
+                                            <div class="feed-head"><a
+                                                    href="index.html#/">Jassica</a> commented on <a
+                                                    href="index.html#/">4 keys to make your business unique</a>
                                             </div>
+                                            <div class="feed-content">
+                                                <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feed-element">
+                                            <div class="feed-head"><a
+                                                    href="index.html#/">Jassica</a> commented on <a
+                                                    href="index.html#/">4 keys to make your business unique</a>
+                                            </div>
+                                            <div class="feed-content">
+                                                <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feed-element">
+                                            <div class="feed-head"><a
+                                                    href="index.html#/">Morrise</a> added 3 new photos to the gallery
+                                                <a href="index.html#/">Australia Trip</a></div>
+                                            <div class="feed-content">
+                                                <div class="media-inline">
+                                                    <img src="images/media-1.jpg" alt="Media" title="Media"/>
+                                                    <img src="images/media-2.jpg" alt="Media" title="Media"/>
+                                                    <img src="images/media-3.jpg" alt="Media" title="Media"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feed-element">
+                                            <div class="feed-head"><a
+                                                    href="index.html#/">Stella Johnson</a> is now connected with
+                                                <a href="index.html#/">Tom Brown</a></div>
+                                            <div class="feed-content">
+                                                <div class="connected-users">
+                                                    <img class="pull-left img-circle avatar"
+                                                         src="images/stella-johnson.png" alt=""/>
+                                                    <i class="pull-left icon-shareable icon-2x"></i>
+                                                    <img class="pull-left img-circle avatar"
+                                                         src="images/man-3.jpg" alt=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="feed-element">
+                                            <div class="feed-head"><a href="index.html#/">Domnic</a> is feeling
+                                                <a href="index.html#/">blessed</a></div>
+                                            <div class="feed-content">
+                                                <p>Today I’m blessed with a baby girl. Its not easy to express the feelings :)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-block btn-2x">SHOW MORE</button>
+                        </div>
+                    </div>
+                    <div class="animatedParent animateOnce z-index-42">
+                        <div class="panel panel-default animated fadeInUp">
+                            <div class="panel-body">
+                                <div class="speed-analyzer">
+                                    <div class="speed-analyzer-text">
+                                        <h4>Download Speed Analyzer</h4>
+                                        <p>Speed test run on different anlayzers including google and YSlow.</p>
+                                    </div>
+                                    <div class="speed-score">
+                                        <strong class="score">82</strong>
+                                        <span class="uppercase">Google Score</span>
+                                    </div>
+                                    <div class="speed-score">
+                                        <strong class="score">73</strong>
+                                        <span class="uppercase">YSlow Score</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 animatedParent animateOnce z-index-41">
+                    <div class="panel panel-default animated fadeInUp">
+                        <div class="panel-heading no-border clearfix">
+                            <h2 class="panel-title">TO-DOs for today</h2>
+                            <ul class="panel-tool-options">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                       aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="index.html#"><i
+                                                class="icon-arrows-ccw"></i> Update data</a></li>
+                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
                                         </li>
-                                        <li>
-                                            <ul class="dropdown-list">
-                                                <li class="unread notification-success">
-                                                    <a href="index.html#">
-                                                        <i class="icon-user-add pull-right"/>
-                                                        <p:outputLabel value="New user registered"
-                                                                       styleClass="block-line strong"/>
-                                                        <p:outputLabel value="30 seconds ago"
-                                                                       styleClass="block-line small"/>
-                                                    </a>
-                                                </li>
-                                                <li class="unread notification-secondary">
-                                                    <a href="index.html#">
-                                                        <i class="icon-heart pull-right"/>
-                                                        <p:outputLabel value="Someone special liked this" styleClass="block-line strong"/>
-                                                        <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
-                                                    </a>
-                                                </li>
-                                                <li class="unread notification-primary">
-                                                    <a href="index.html#">
-                                                        <i class="icon-user pull-right"/>
-                                                        <p:outputLabel value="Privacy settings have been changed" styleClass="block-line strong"/>
-                                                        <p:outputLabel value="2 hours ago" styleClass="block-line small"/>
-                                                    </a>
-                                                </li>
-                                                <li class="notification-danger">
-                                                    <a href="index.html#">
-                                                        <i class="icon-cancel-circled pull-right"/>
-                                                        <p:outputLabel value="Someone special liked this" styleClass="block-line strong"/>
-                                                        <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
-                                                    </a>
-                                                </li>
-                                                <li class="notification-info">
-                                                    <a href="index.html#">
-                                                        <i class="icon-info pull-right"/>
-                                                        <p:outputLabel value="Someone special liked this" styleClass="block-line strong"/>
-                                                        <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
-                                                    </a>
-                                                </li>
-                                                <li class="notification-warning">
-                                                    <a href="index.html#">
-                                                        <i class="icon-rss pull-right"/>
-                                                        <p:outputLabel value="Someone special liked this" styleClass="block-line strong"/>
-                                                        <p:outputLabel value="60 seconds ago" styleClass="block-line small"/>
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                        <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
                                         </li>
-                                        <li class="external-last">
-                                            <p:link outcome="index.xhtml" styleClass="danger" value="View all notifications"/>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <!-- /notifications -->
-
-                                <!-- Messages -->
-                                <li class="notifications dropdown">
-                                    <a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-                                        <i class="icon-mail"/><span class="badge badge-secondary">12</span>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li class="first">
-                                            <div class="dropdown-content-header"><i class="fa fa-pencil-square-o pull-right"/> Messages</div>
-                                        </li>
-                                        <li>
-                                            <ul class="media-list">
-                                                <li class="media">
-                                                    <div class="media-left">
-                                                        <p:graphicImage styleClass="img-circle img-sm" value="#{resource['primefaces-bumblebee:images/domnic-brown.png']}"/>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <p:link outcome="index.xhtml" styleClass="media-heading">
-                                                            <p:outputLabel styleClass="text-semibold" value="Domnic Brown"/>
-                                                            <p:outputLabel styleClass="media-annotation pull-right" value="True"/>
-                                                        </p:link>
-                                                        <p:outputLabel styleClass="text-muted" value="Your product sounds interesting I would love to check this ne..."/>
-                                                    </div>
-                                                </li>
-                                                <li class="media">
-                                                    <div class="media-left">
-                                                        <p:graphicImage styleClass="img-circle img-sm" value="#{resource['primefaces-bumblebee:images/john-smith.png']}"/>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <p:link outcome="index.xhtml" styleClass="media-heading">
-                                                            <p:outputLabel styleClass="text-semibold" value="John Smith"/>
-                                                            <p:outputLabel styleClass="media-annotation pull-right" value="12:30"/>
-                                                        </p:link>
-                                                        <p:outputLabel styleClass="text-muted" value="Thank you for posting such a wonderful content. The writing was outstanding..."/>
-                                                    </div>
-                                                </li>
-                                                <li class="media">
-                                                    <div class="media-left">
-                                                        <p:graphicImage styleClass="img-circle img-sm" value="#{resource['primefaces-bumblebee:images/stella-johnson.png']}"/>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <p:link outcome="index.xhtml" styleClass="media-heading">
-                                                            <p:outputLabel styleClass="text-semibold" value="Stella Johnson"/>
-                                                            <p:outputLabel styleClass="media-annotation pull-right" value="2 days ago"/>
-                                                        </p:link>
-                                                        <p:outputLabel styleClass="text-muted" value="Thank you for trusting us to be your source for top quality sporting goods..."/>
-                                                    </div>
-                                                </li>
-                                                <li class="media">
-                                                    <div class="media-left">
-                                                        <p:graphicImage styleClass="img-circle img-sm" value="#{resource['primefaces-bumblebee:images/alex-dolgove.png']}"/>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <p:link outcome="index.xhtml" styleClass="media-heading">
-                                                            <p:outputLabel styleClass="text-semibold" value="Alex Dolgove"/>
-                                                            <p:outputLabel styleClass="media-annotation pull-right" value="10:45"/>
-                                                        </p:link>
-                                                        <p:outputLabel styleClass="text-muted" value="After our Friday meeting I was thinking about our business relationship and how fortunate..."/>
-                                                    </div>
-                                                </li>
-                                                <li class="media">
-                                                    <div class="media-left">
-                                                        <p:graphicImage styleClass="img-circle img-sm" value="#{resource['primefaces-bumblebee:images/domnic-brown.png']}"/>
-                                                    </div>
-                                                    <div class="media-body">
-                                                        <p:link outcome="index.xhtml" styleClass="media-heading">
-                                                            <p:outputLabel styleClass="text-semibold" value="Domnic Brown"/>
-                                                            <p:outputLabel styleClass="media-annotation pull-right" value="4:00"/>
-                                                        </p:link>
-                                                        <p:outputLabel styleClass="text-muted" value="I would like to take this opportunity to thank you for your cooperation in recently completing..."/>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="external-last">
-                                            <p:link styleClass="danger" outcome="index.xhtml" value="All Messages"/>
+                                        <li class="divider"></li>
+                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <!-- /messages -->
                             </ul>
-                            <!-- /user alerts -->
+                        </div>
+                        <!-- panel body -->
+                        <div class="panel-body">
+                            <ul class="list-item todo-list">
+                                <li>
+                                    <div class="checkbox checkbox-replace checkbox-primary">
+                                        <input type="checkbox" id="task-1"/> <label
+                                            for="task-1">Fresh look &amp; feel to repaint the website according to the new brand logo.</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox checkbox-replace checkbox-primary">
+                                        <input type="checkbox" id="task-2"/> <label
+                                            for="task-2">Need some new responsive design for the wbesite.</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox checkbox-replace checkbox-primary">
+                                        <input type="checkbox" id="task-3"/> <label
+                                            for="task-3">Fresh look &amp; feel to repaint the website according to the new brand logo. </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox checkbox-replace checkbox-primary">
+                                        <input type="checkbox" id="task-4"/> <label
+                                            for="task-4">Fresh look &amp; feel to repaint the website according to the new brand logo. </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox checkbox-replace checkbox-primary">
+                                        <input type="checkbox" id="task-5"/> <label
+                                            for="task-5">Fresh look &amp; feel to repaint the website according to the new brand logo. </label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="more">
+                                <button class="btn btn-primary">Click More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- /main header -->
-
-                <!-- Main content -->
-                <div class="main-content">
-                    <h1 class="page-title">Dashboard</h1>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="row">
-                                <div class="col-md-6 animatedParent animateOnce z-index-50">
-                                    <div class="panel minimal panel-default animated fadeInUp">
-                                        <div class="panel-heading clearfix">
-                                            <div class="panel-title">Signups</div>
-                                            <ul class="panel-tool-options">
-                                                <li class="dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                       aria-expanded="false"><i class="icon-cog"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-arrows-ccw"></i> Update data</a></li>
-                                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                        </li>
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-chart-pie"></i> Statistics</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- panel body -->
-                                        <div class="panel-body">
-                                            <div class="row col-with-divider">
-                                                <div class="col-xs-6 text-center stack-order">
-                                                    <h1 class="no-margins">87</h1>
-                                                    <small>This week</small>
-                                                </div>
-                                                <div class="col-xs-6 text-center stack-order">
-                                                    <h1 class="no-margins">53</h1>
-                                                    <small>Last week</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 animatedParent animateOnce z-index-49">
-                                    <div class="panel minimal panel-default animated fadeInUp">
-                                        <div class="panel-heading clearfix">
-                                            <div class="panel-title">Last month sale</div>
-                                            <ul class="panel-tool-options">
-                                                <li class="dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                       aria-expanded="false"><i class="icon-cog"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-arrows-ccw"></i> Update data</a></li>
-                                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                        </li>
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-chart-pie"></i> Statistics</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- panel body -->
-                                        <div class="panel-body">
-                                            <div class="stack-order">
-                                                <h1 class="no-margins">$87,003</h1>
-                                                <small>Raised from 89 orders.</small>
-                                            </div>
-                                            <div class="bar-chart-icon"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 animatedParent animateOnce z-index-48">
-                                    <div class="panel minimal panel-default animated fadeInUp">
-                                        <div class="panel-heading clearfix">
-                                            <div class="panel-title">Visitors</div>
-                                            <ul class="panel-tool-options">
-                                                <li class="dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                       aria-expanded="false"><i class="icon-cog"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-arrows-ccw"></i> Update data</a></li>
-                                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                        </li>
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-chart-pie"></i> Statistics</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- panel body -->
-                                        <div class="panel-body">
-                                            <div class="stack-order">
-                                                <h1 class="no-margins">823</h1>
-                                                <small>New visits this month</small>
-                                            </div>
-                                            <div class="bar-chart-icon"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 animatedParent animateOnce z-index-47">
-                                    <div class="panel minimal panel-default animated fadeInUp">
-                                        <div class="panel-heading no-border clearfix">
-                                            <ul class="panel-tool-options">
-                                                <li class="dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                       aria-expanded="false"><i class="icon-cog"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-arrows-ccw"></i> Update data</a></li>
-                                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                        </li>
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-chart-pie"></i> Statistics</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- panel body -->
-                                        <div class="panel-body panel-content">
-                                            <div class="stack-order text-center">
-                                                <h1>7856</h1>
-                                                <h4>Products sold so far</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 animatedParent animateOnce z-index-46">
-                                    <div class="panel panel-default animated fadeInUp">
-                                        <div class="panel-body">
-                                            <h2>Recent comments from customers</h2>
-                                            <ul class="comments-list removeable-list">
-                                                <li>
-                                                    <div class="comment-head"><a
-                                                            href="index.html#/">Jassica</a> commented on <a
-                                                            href="index.html#/">4 keys to make your business unique</a>
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
-                                                    </div>
-                                                    <div class="comment-footer">
-                                                        <button class="btn btn-sm btn-success">APPROVE</button>
-                                                        <button class="btn btn-sm btn-red">DELETE</button>
-                                                    </div>
-                                                    <a href="index.html#/" class="remove"><img
-                                                            src="images/icon-close.png" alt="Remove"
-                                                            title="Remove"/></a>
-                                                </li>
-                                                <li>
-                                                    <div class="comment-head"><a
-                                                            href="index.html#/">Jassica</a> commented on <a
-                                                            href="index.html#/">4 keys to make your business unique</a>
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
-                                                    </div>
-                                                    <div class="comment-footer">
-                                                        <button class="btn btn-sm btn-success">APPROVE</button>
-                                                        <button class="btn btn-sm btn-red">DELETE</button>
-                                                    </div>
-                                                    <a href="index.html#/" class="remove"><img
-                                                            src="images/icon-close.png" alt="Remove"
-                                                            title="Remove"/></a>
-                                                </li>
-                                                <li>
-                                                    <div class="comment-head"><a
-                                                            href="index.html#/">Jassica</a> commented on <a
-                                                            href="index.html#/">4 keys to make your business unique</a>
-                                                    </div>
-                                                    <div class="comment-text">
-                                                        <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
-                                                    </div>
-                                                    <div class="comment-footer">
-                                                        <button class="btn btn-sm btn-success">APPROVE</button>
-                                                        <button class="btn btn-sm btn-red">DELETE</button>
-                                                    </div>
-                                                    <a href="index.html#/" class="remove"><img
-                                                            src="images/icon-close.png" alt="Remove"
-                                                            title="Remove"/></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-lg-12 animatedParent animateOnce z-index-45">
-                                    <div class="panel panel-default animated fadeInUp">
-                                        <div class="panel-heading no-border clearfix">
-                                            <h3 class="panel-title">VISIT STATS</h3>
-                                            <ul class="panel-tool-options">
-                                                <li class="dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                       aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-arrows-ccw"></i> Update data</a></li>
-                                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                        </li>
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-chart-pie"></i> Statistics</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <!-- panel body -->
-                                        <div class="panel-body">
-                                            <div class="canvas-chart has-doughnut-legend">
-                                                <canvas id="doughnutChart" width="408" height="300"></canvas>
-                                            </div>
-                                            <div class="height-13"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-4 animatedParent animateOnce z-index-40">
+                    <div class="panel panel-default animated fadeInUp">
+                        <div class="panel-heading no-border clearfix">
+                            <h2 class="panel-title">Recent Members</h2>
+                            <ul class="panel-tool-options">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                       aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="index.html#"><i
+                                                class="icon-arrows-ccw"></i> Update data</a></li>
+                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                        </li>
+                                        <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="animatedParent animateOnce z-index-44">
-                                <div class="panel-group animated fadeInUp">
-                                    <div class="panel panel-invert">
-                                        <div class="panel-heading no-border clearfix">
-                                            <h2 class="panel-title">Revenue</h2>
-                                            <ul class="panel-tool-options">
-                                                <li><a href="index.html#" id="Revenuelines"><i
-                                                        class="icon-chart-line icon-2x"></i></a></li>
-                                                <li class="dropdown">
-                                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                       aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                                    <ul class="dropdown-menu dropdown-menu-right">
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-arrows-ccw"></i> Update data</a></li>
-                                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                        </li>
-                                                        <li><a href="index.html#"><i
-                                                                class="icon-chart-pie"></i> Statistics</a></li>
-                                                        <li class="divider"></li>
-                                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="panel-body">
-                                            <div class="flot-chart">
-                                                <div id="Revenue-lines" class="flot-chart-content"></div>
-                                            </div>
-                                            <div id="placeholder_overview" style="width:100%; height:60px;"></div>
-                                        </div>
+                        <!-- panel body -->
+                        <div class="panel-body">
+                            <ul class="list-item member-list">
+                                <li>
+                                    <div class="user-avatar">
+                                        <img title="" alt="" class="img-circle avatar"
+                                             src="images/john-smith.png"/>
                                     </div>
-                                    <div class="panel">
-                                        <div class="panel-body">
-                                            <div class="panel-update-content">
-                                                <div class="row-revenue clearfix">
-                                                    <div class="col-xs-6">
-                                                        <h5>Gross Revenue</h5>
-                                                        <h1>9,362.74</h1>
-                                                    </div>
-                                                    <div class="col-xs-6">
-                                                        <h5>Net Revenue</h5>
-                                                        <h1>6,734.89</h1>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="user-detail">
+                                        <h5>John Smith</h5>
+                                        <p>Joined 15 mins ago.</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="animatedParent animateOnce z-index-43">
-                                <div class="panel panel-default no-border animated fadeInUp">
-                                    <div class="panel-heading no-border clearfix">
-                                        <h2 class="panel-title">Latest Activities</h2>
-                                        <ul class="panel-tool-options">
-                                            <li class="dropdown">
-                                                <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                                   aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                                <ul class="dropdown-menu dropdown-menu-right">
-                                                    <li><a href="index.html#"><i
-                                                            class="icon-arrows-ccw"></i> Update data</a></li>
-                                                    <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                    </li>
-                                                    <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
-                                                    </li>
-                                                    <li class="divider"></li>
-                                                    <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                </li>
+                                <li>
+                                    <div class="user-avatar">
+                                        <img title="" alt="" class="img-circle avatar"
+                                             src="images/domnic-brown.png"/>
                                     </div>
-                                    <div class="panel-body">
-                                        <ul class="list-item">
-                                            <li>
-                                                <div class="feed-element">
-                                                    <div class="feed-head"><a
-                                                            href="index.html#/">Jassica</a> commented on <a
-                                                            href="index.html#/">4 keys to make your business unique</a>
-                                                    </div>
-                                                    <div class="feed-content">
-                                                        <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="feed-element">
-                                                    <div class="feed-head"><a
-                                                            href="index.html#/">Jassica</a> commented on <a
-                                                            href="index.html#/">4 keys to make your business unique</a>
-                                                    </div>
-                                                    <div class="feed-content">
-                                                        <p>Thank you for posting such a wonderful content. The writing was outstanding. Subscribed to latest from you as well :)</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="feed-element">
-                                                    <div class="feed-head"><a
-                                                            href="index.html#/">Morrise</a> added 3 new photos to the gallery
-                                                        <a href="index.html#/">Australia Trip</a></div>
-                                                    <div class="feed-content">
-                                                        <div class="media-inline">
-                                                            <img src="images/media-1.jpg" alt="Media" title="Media"/>
-                                                            <img src="images/media-2.jpg" alt="Media" title="Media"/>
-                                                            <img src="images/media-3.jpg" alt="Media" title="Media"/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="feed-element">
-                                                    <div class="feed-head"><a
-                                                            href="index.html#/">Stella Johnson</a> is now connected with
-                                                        <a href="index.html#/">Tom Brown</a></div>
-                                                    <div class="feed-content">
-                                                        <div class="connected-users">
-                                                            <img class="pull-left img-circle avatar"
-                                                                 src="images/stella-johnson.png" alt=""/>
-                                                            <i class="pull-left icon-shareable icon-2x"></i>
-                                                            <img class="pull-left img-circle avatar"
-                                                                 src="images/man-3.jpg" alt=""/>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="feed-element">
-                                                    <div class="feed-head"><a href="index.html#/">Domnic</a> is feeling
-                                                        <a href="index.html#/">blessed</a></div>
-                                                    <div class="feed-content">
-                                                        <p>Today I’m blessed with a baby girl. Its not easy to express the feelings :)</p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <div class="user-detail">
+                                        <h5>Domnic Brown</h5>
+                                        <p>Joined 2 days ago.</p>
                                     </div>
-                                    <button class="btn btn-primary btn-block btn-2x">SHOW MORE</button>
-                                </div>
-                            </div>
-                            <div class="animatedParent animateOnce z-index-42">
-                                <div class="panel panel-default animated fadeInUp">
-                                    <div class="panel-body">
-                                        <div class="speed-analyzer">
-                                            <div class="speed-analyzer-text">
-                                                <h4>Download Speed Analyzer</h4>
-                                                <p>Speed test run on different anlayzers including google and YSlow.</p>
-                                            </div>
-                                            <div class="speed-score">
-                                                <strong class="score">82</strong>
-                                                <span class="uppercase">Google Score</span>
-                                            </div>
-                                            <div class="speed-score">
-                                                <strong class="score">73</strong>
-                                                <span class="uppercase">YSlow Score</span>
-                                            </div>
-                                        </div>
+                                </li>
+                                <li>
+                                    <div class="user-avatar">
+                                        <img title="" alt="" class="img-circle avatar"
+                                             src="images/stella-johnson.png"/>
                                     </div>
-                                </div>
+                                    <div class="user-detail">
+                                        <h5>Stella Johnson</h5>
+                                        <p>Joined 1 day ago.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="user-avatar">
+                                        <img title="" alt="" class="img-circle avatar"
+                                             src="images/alex-dolgove.png"/>
+                                    </div>
+                                    <div class="user-detail">
+                                        <h5>Alex Dolgove</h5>
+                                        <p>Joined 5 days ago.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="more">
+                                <button class="btn btn-primary">Click More</button>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 animatedParent animateOnce z-index-41">
-                            <div class="panel panel-default animated fadeInUp">
-                                <div class="panel-heading no-border clearfix">
-                                    <h2 class="panel-title">TO-DOs for today</h2>
-                                    <ul class="panel-tool-options">
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                               aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="index.html#"><i
-                                                        class="icon-arrows-ccw"></i> Update data</a></li>
-                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                </li>
-                                                <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- panel body -->
-                                <div class="panel-body">
-                                    <ul class="list-item todo-list">
-                                        <li>
-                                            <div class="checkbox checkbox-replace checkbox-primary">
-                                                <input type="checkbox" id="task-1"/> <label
-                                                    for="task-1">Fresh look &amp; feel to repaint the website according to the new brand logo.</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-replace checkbox-primary">
-                                                <input type="checkbox" id="task-2"/> <label
-                                                    for="task-2">Need some new responsive design for the wbesite.</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-replace checkbox-primary">
-                                                <input type="checkbox" id="task-3"/> <label
-                                                    for="task-3">Fresh look &amp; feel to repaint the website according to the new brand logo. </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-replace checkbox-primary">
-                                                <input type="checkbox" id="task-4"/> <label
-                                                    for="task-4">Fresh look &amp; feel to repaint the website according to the new brand logo. </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="checkbox checkbox-replace checkbox-primary">
-                                                <input type="checkbox" id="task-5"/> <label
-                                                    for="task-5">Fresh look &amp; feel to repaint the website according to the new brand logo. </label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="more">
-                                        <button class="btn btn-primary">Click More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 animatedParent animateOnce z-index-40">
-                            <div class="panel panel-default animated fadeInUp">
-                                <div class="panel-heading no-border clearfix">
-                                    <h2 class="panel-title">Recent Members</h2>
-                                    <ul class="panel-tool-options">
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                               aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="index.html#"><i
-                                                        class="icon-arrows-ccw"></i> Update data</a></li>
-                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                </li>
-                                                <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- panel body -->
-                                <div class="panel-body">
-                                    <ul class="list-item member-list">
-                                        <li>
-                                            <div class="user-avatar">
-                                                <img title="" alt="" class="img-circle avatar"
-                                                     src="images/john-smith.png"/>
-                                            </div>
-                                            <div class="user-detail">
-                                                <h5>John Smith</h5>
-                                                <p>Joined 15 mins ago.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="user-avatar">
-                                                <img title="" alt="" class="img-circle avatar"
-                                                     src="images/domnic-brown.png"/>
-                                            </div>
-                                            <div class="user-detail">
-                                                <h5>Domnic Brown</h5>
-                                                <p>Joined 2 days ago.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="user-avatar">
-                                                <img title="" alt="" class="img-circle avatar"
-                                                     src="images/stella-johnson.png"/>
-                                            </div>
-                                            <div class="user-detail">
-                                                <h5>Stella Johnson</h5>
-                                                <p>Joined 1 day ago.</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="user-avatar">
-                                                <img title="" alt="" class="img-circle avatar"
-                                                     src="images/alex-dolgove.png"/>
-                                            </div>
-                                            <div class="user-detail">
-                                                <h5>Alex Dolgove</h5>
-                                                <p>Joined 5 days ago.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="more">
-                                        <button class="btn btn-primary">Click More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 animatedParent animateOnce z-index-39">
-                            <div class="panel panel-default animated fadeInUp">
-                                <div class="panel-heading no-border clearfix">
-                                    <h2 class="panel-title">New Messages</h2>
-                                    <ul class="panel-tool-options">
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                               aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="index.html#"><i
-                                                        class="icon-arrows-ccw"></i> Update data</a></li>
-                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                </li>
-                                                <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- panel body -->
-                                <div class="panel-body">
-                                    <ul class="list-item message-list">
-                                        <li>
-                                            <i class="icon-mail icon-2x"></i>
-                                            <div class="message-body">
-                                                <h5>Interested in buying your pro</h5>
-                                                <p>Your product sounds interesting I would love to check this ne...</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="icon-mail icon-2x"></i>
-                                            <div class="message-body">
-                                                <h5>Interested in buying your pro</h5>
-                                                <p>Your product sounds interesting I would love to check this ne...</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="icon-mail icon-2x"></i>
-                                            <div class="message-body">
-                                                <h5>Interested in buying your pro</h5>
-                                                <p>Your product sounds interesting I would love to check this ne...</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <i class="icon-mail icon-2x"></i>
-                                            <div class="message-body">
-                                                <h5>Interested in buying your pro</h5>
-                                                <p>Your product sounds interesting I would love to check this ne...</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="more">
-                                        <button class="btn btn-primary">Click More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12 animatedParent animateOnce z-index-38">
-                            <div class="panel panel-default animated fadeInUp">
-                                <div class="panel-heading no-border clearfix">
-                                    <h2 class="panel-title">Site Traffic</h2>
-                                    <ul class="panel-tool-options">
-                                        <li><a href="index.html#" id="lines"><i class="icon-chart-line icon-2x"></i></a>
-                                        </li>
-                                        <li><a href="index.html#" id="bars"><i class="icon-chart-bar icon-2x"></i></a>
-                                        </li>
-                                        <li class="dropdown">
-                                            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
-                                               aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
-                                            <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="index.html#"><i
-                                                        class="icon-arrows-ccw"></i> Update data</a></li>
-                                                <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
-                                                </li>
-                                                <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
-                                                </li>
-                                                <li class="divider"></li>
-                                                <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="flot-chart float-chart-lg">
-                                        <div id="graph-lines" class="flot-chart-content"></div>
-                                        <div id="graph-bars" class="flot-chart-content"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Footer -->
-                    <footer class="animatedParent animateOnce z-index-10">
-                        <div class="footer-main animated fadeInUp slow">2016 <strong>Mouldifi</strong> Admin Theme by <a
-                                target="_blank" href="index.html#/">G-axon</a></div>
-                    </footer>
-                    <!-- /footer -->
-
                 </div>
-                <!-- /main content -->
-
+                <div class="col-lg-4 animatedParent animateOnce z-index-39">
+                    <div class="panel panel-default animated fadeInUp">
+                        <div class="panel-heading no-border clearfix">
+                            <h2 class="panel-title">New Messages</h2>
+                            <ul class="panel-tool-options">
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                       aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="index.html#"><i
+                                                class="icon-arrows-ccw"></i> Update data</a></li>
+                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                        </li>
+                                        <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- panel body -->
+                        <div class="panel-body">
+                            <ul class="list-item message-list">
+                                <li>
+                                    <i class="icon-mail icon-2x"></i>
+                                    <div class="message-body">
+                                        <h5>Interested in buying your pro</h5>
+                                        <p>Your product sounds interesting I would love to check this ne...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-mail icon-2x"></i>
+                                    <div class="message-body">
+                                        <h5>Interested in buying your pro</h5>
+                                        <p>Your product sounds interesting I would love to check this ne...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-mail icon-2x"></i>
+                                    <div class="message-body">
+                                        <h5>Interested in buying your pro</h5>
+                                        <p>Your product sounds interesting I would love to check this ne...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="icon-mail icon-2x"></i>
+                                    <div class="message-body">
+                                        <h5>Interested in buying your pro</h5>
+                                        <p>Your product sounds interesting I would love to check this ne...</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="more">
+                                <button class="btn btn-primary">Click More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /main container -->
-
+            <div class="row">
+                <div class="col-lg-12 animatedParent animateOnce z-index-38">
+                    <div class="panel panel-default animated fadeInUp">
+                        <div class="panel-heading no-border clearfix">
+                            <h2 class="panel-title">Site Traffic</h2>
+                            <ul class="panel-tool-options">
+                                <li><a href="index.html#" id="lines"><i class="icon-chart-line icon-2x"></i></a>
+                                </li>
+                                <li><a href="index.html#" id="bars"><i class="icon-chart-bar icon-2x"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#"
+                                       aria-expanded="false"><i class="icon-cog icon-2x"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li><a href="index.html#"><i
+                                                class="icon-arrows-ccw"></i> Update data</a></li>
+                                        <li><a href="index.html#"><i class="icon-list"></i> Detailed log</a>
+                                        </li>
+                                        <li><a href="index.html#"><i class="icon-chart-pie"></i> Statistics</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li><a href="index.html#"><i class="icon-cancel"></i> Clear list</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="flot-chart float-chart-lg">
+                                <div id="graph-lines" class="flot-chart-content"></div>
+                                <div id="graph-bars" class="flot-chart-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="animatedParent animateOnce z-index-10">
+                <div class="footer-main animated fadeInUp slow">2016 <strong>Mouldifi</strong> Admin Theme by <a
+                        target="_blank" href="index.html#/">G-axon</a></div>
+            </footer>
+            <!-- /footer -->
 
         </div>
-    </h:form>
-
-
-    <h:outputScript library="primefaces-bumblebee" name="js/jquery.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/jquery.nicescroll.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/css3-animate-it-plugin/css3-animate-it.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/bootstrap.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/metismenu/jquery.metisMenu.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/blockui-master/jquery-ui.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/blockui-master/jquery.blockUI.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.tooltip.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.resize.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.selection.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.pie.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/flot/jquery.flot.time.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/functions.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/plugins/chartjs/Chart.min.js"/>
-    <h:outputScript library="primefaces-bumblebee" name="js/my.js"/>
-
-</h:body>
-</html>
+        <!-- /main content -->
+    </ui:define>
+</ui:composition>
