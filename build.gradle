@@ -38,7 +38,7 @@ project(':primefaces-theme') {
 project (":primefaces-demo") {
     apply plugin: 'war'
 
-    version '1.2'
+    version '1.2.1'
 
     war {
         manifest {

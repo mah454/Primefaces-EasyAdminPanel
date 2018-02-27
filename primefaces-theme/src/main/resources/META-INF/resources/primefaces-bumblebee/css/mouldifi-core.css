@@ -735,11 +735,13 @@ ul.main-menu > li > a:focus {
     color: #FFFFFF;
 }
 
+ul.main-menu .nav > li > a > label,
 ul.main-menu .nav > li > a:hover,
 ul.main-menu .nav > li > a:focus,
 ul.main-menu .nav > li.has-sub.active > a {
     background-color: #1D1D1D;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 ul.main-menu .nav > li > a {
@@ -1187,6 +1189,9 @@ ul.user-info {
     background-color: #fad839;
 }
 
+.notifications.dropdown .dropdown-menu li a label{
+    cursor: pointer;
+}
 .notifications.dropdown .dropdown-menu li.unread .strong {
     font-weight: 600;
 }
@@ -1337,6 +1342,10 @@ ul.user-info {
 
 .profile-info.dropdown > a {
     color: #434343;
+}
+
+.profile-info.dropdown a label {
+    cursor: pointer;
 }
 
 .profile-info.dropdown .dropdown-menu > li:last-child {
@@ -5151,4 +5160,11 @@ ul.mail-attachment li {
 .footer-main {
     border-top: solid 1px #ddd;
     padding: 10px 0 2px;
+}
+
+
+/* Primeface change default values */
+
+.ui-separator {
+    margin: 3px;
 }
