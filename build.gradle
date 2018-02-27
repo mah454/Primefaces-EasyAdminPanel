@@ -1,6 +1,11 @@
+import sun.management.snmp.jvminstr.JvmClassLoadingImpl
+
 subprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
     repositories {
         mavenLocal()
@@ -14,8 +19,39 @@ subprojects {
     }
 }
 
+project(':primefaces-theme') {
+    version '1.1.2'
+    jar {
+        manifest {
+            attributes(
+                    "Implementation-Title": "primefaces-theme",
+                    "Implementation-Version": version,
+                    "Implementation-Vendor": "Moke System Inc",
+                    "Implementation-Vendor-Id": "ir.moke",
+                    "Built-By": "mah454",
+                    "Created-By": "Gradle 4.2"
+            )
+        }
+    }
+}
+
 project (":primefaces-demo") {
     apply plugin: 'war'
+
+    version '1.2'
+
+    war {
+        manifest {
+            attributes(
+                    "Implementation-Title": "primefaces-demo",
+                    "Implementation-Version": version,
+                    "Implementation-Vendor": "Moke System Inc",
+                    "Implementation-Vendor-Id": "ir.moke",
+                    "Built-By": "mah454",
+                    "Created-By": "Gradle 4.2"
+            )
+        }
+    }
 
     dependencies {
         compile project(":primefaces-theme")
